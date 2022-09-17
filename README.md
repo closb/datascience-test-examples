@@ -14,10 +14,14 @@ Programming is summarized by the infamous quote:
 
 Lastly, I make no claims to the ownership of any of these questions or solutions. I went with what was the easiest for me to understand and implement. I have done my best to cite the source with both the question and the solution.
 
-If you feel that I may have violated any of your intellectual property rights, just hit me up and I will gladly remove it.
+If you feel that I may have violated any of your intellectual property rights, just hit me up and I will gladly remove it. No harm no foul. 
 
-No harm no foul. As an open source advocate, I am ardent in my belief that we must use the information age for good, instead of feverishly and incessecantly trying to elevate our status quo.
+As an open source advocate, I am ardent in my belief that we must use the information age for good, instead of feverishly and incessecantly trying to elevate our status quo.
 
 Carpe Diem!
 
+## This is a work in progress
 
+The examples are not exhaustive, and are not complete in some cases. I will be adding more as I find them. More importantly it is imperative that we understand our roles as "developers" makes it clear that we must continue to "develop" our skills and knowledge.
+
+That said, I have yet to meet an expert in any field that will tell you that they have stopped learning new things. For mastery is a journey, never a destination.
