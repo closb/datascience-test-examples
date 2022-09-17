@@ -1,0 +1,27 @@
+{
+  "name": "data-science",
+  "version": "1.0.0",
+  "description": "Software Engineering Data Science Test Examples",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/closb/datascience-test-examples.git"
+  },
+  "keywords": [
+    "data-science",
+    "learning-exercise",
+    "software-engineering"
+  ],
+  "author": "Carlos Barberena",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/closb/coding-test-examples/issues"
+  },
+  "homepage": "https://github.com/closb/coding-test-examples#readme",
+  "devDependencies": {
+    "eslint": "^8.23.1"
+  }
+}
