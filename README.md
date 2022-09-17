@@ -25,3 +25,7 @@ Carpe Diem!
 The examples are not exhaustive, and are not complete in some cases. I will be adding more as I find them. More importantly it is imperative that we understand our roles as "developers" makes it clear that we must continue to "develop" our skills and knowledge.
 
 That said, I have yet to meet an expert in any field that will tell you that they have stopped learning new things. For mastery is a journey, never a destination.
+
+### Disclaimer
+
+The examples provided here are taken from practice test, there are no garauntees that you will see these same questions on your specific interview. However, concepts are the same, which means if you learn the concepts, you should be able to apply them to any question.
