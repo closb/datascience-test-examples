@@ -1,6 +1,6 @@
 # Software Engineering Data Science Questions
 
-This repo contains a collection of questions that you will find on a Software Engineering interview. These are publicly available questions you will find on the internet through various sources.
+This repo contains a collection of questions that you might find on a Software Engineering interview. These are publicly available questions you will find on the internet through various sources.
 
 I have taken the liberty to detail as many of the steps possible, even citing verbatim from the source. I have added my own commentary and thoughts on some of the questions.
 
