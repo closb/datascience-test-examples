@@ -127,6 +127,7 @@ function timeConversion(s) {
   }
   return militaryTime + s.substring(2, 8);
 }
+console.log(timeConversion('12:01:00PM'));
 
 // function main() {
 //   const ws = fs.createWriteStream(process.env.OUTPUT_PATH);
