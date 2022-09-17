@@ -72,18 +72,24 @@
 // Solution
 
 function diagonalDifference(arr) {
-  let primaryDiagonal = 0;
-  let secondaryDiagonal = 0;
-  let arrLength = arr.length;
-  let arrIndex = arrLength - 1;
+    // create variables to hold the sums of the diagonals
+    let primaryDiagonal = 0;
+    let secondaryDiagonal = 0;
+    // create variable for length of array to use as index
+    let arrLength = arr.length;
+    let arrIndex = arrLength - 1;
 
-  for (let i = 0; i < arrLength; i++) {
-    primaryDiagonal += arr[i][i];
-    secondaryDiagonal += arr[i][arrIndex];
-    arrIndex--;
+    // loop through the array
+    for (let i = 0; i < arrLength; i++) {
+        // add the value of the current index to the first diagonal
+        primaryDiagonal += arr[i][i];
+        // add the value of the current index to the second diagonal
+        secondaryDiagonal += arr[i][arrIndex];
+        // decrease the index of the second diagonal
+        arrIndex--;
   }
-
-  return Math.abs(primaryDiagonal - secondaryDiagonal);
+    // return the absolute value of the difference between both diagonals
+    return Math.abs(primaryDiagonal - secondaryDiagonal);
 }
 
 // This must be removed for the test to pass
