@@ -46,3 +46,5 @@ function simpleArraySum(ar) {
     // return the sum
     return sum;
 }
+console.log(simpleArraySum(ar));
+

@@ -62,5 +62,7 @@ function getTotalX(a, b) {
     }
     return count;
 }
+console.log(getTotalX([2, 4], [16, 32, 96]));
 
+// accepted by hackerrank
 

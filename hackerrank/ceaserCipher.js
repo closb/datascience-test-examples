@@ -13,3 +13,6 @@ function ceaserCipher(s, k) {
 }
 
 console.log(ceaserCipher('middle-Outz', 2));
+
+// accepted by hackerrank
+

@@ -85,3 +85,5 @@ function lonelyinteger(a) {
 
 // console.log must be removed for the test to pass
 console.log(lonelyinteger([1, 2, 3, 4, 3, 2, 1]));
+
+// accepted by HackerRank

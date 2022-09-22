@@ -90,3 +90,5 @@ console.log(dayOfProgrammer(2017)); // 13.09.2017
 console.log(dayOfProgrammer(2016)); // 12.09.2016
 console.log(dayOfProgrammer(1800)); // 12.09.1800
 console.log(dayOfProgrammer(1918)); // 26.09.1918
+
+// accepted by hackerrank

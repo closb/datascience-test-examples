@@ -10,3 +10,6 @@ function gridChallenge(grid) {
     return 'YES';
 }
 console.log(gridChallenge(['ebacd', 'fghij', 'olmkn', 'trpqs', 'xywuv']));
+
+// accepted by hackerrank
+

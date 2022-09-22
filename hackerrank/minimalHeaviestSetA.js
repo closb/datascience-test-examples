@@ -53,18 +53,17 @@
 // }
 
 /**
- * 
- * @param {*} arr 
- * @returns 
- * 
+ *
+ * @param {*} arr
+ * @returns
+ *
  */
-
 
 // divide the items weight into two subsets A and B for packing into associated boxes while respecting the following conditions:
 
 function minimalHeaviestSetA(arr) {
   let sorted = arr.sort((a, b) => a - b);
-let totalWeight = sorted.reduce((a,b) => a+b);
+  let totalWeight = sorted.reduce((a, b) => a + b);
   let aWeight = 0,
     bWeight = totalWeight;
   let A = [],

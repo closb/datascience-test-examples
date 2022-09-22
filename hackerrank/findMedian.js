@@ -59,4 +59,4 @@ function findMedian(arr) {
 findMedian(arr);
 
 // Solution accepted by HackerRank
-// Used Quokka.js to test the code
+

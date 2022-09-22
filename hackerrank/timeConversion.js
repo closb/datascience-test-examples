@@ -129,14 +129,4 @@ function timeConversion(s) {
 }
 console.log(timeConversion('12:01:00PM'));
 
-// function main() {
-//   const ws = fs.createWriteStream(process.env.OUTPUT_PATH);
-
-//   const s = readLine();
-
-//   const result = timeConversion(s);
-
-//   ws.write(result + '\n');
-
-//   ws.end();
-// }
+// accepted by hackerrank

@@ -48,52 +48,68 @@
 // endIndices = [3]
 // The substring from index 1 to 3 is '|*|'. There is no compartments in this string.
 
-/** 
+/**
  * Complete the 'numberOfItems' function below.
- * 
+ *
  * The function is expected to return an INTEGER_ARRAY
  * The function accepts following paraments:
  * 1. STRING s
  * 2. INTEGER_ARRAY startIndices
  * 3. INTEGER_ARRAY endIndices
- * 
+ *
  */
 
 /**
- * 
- * @param {*} s 
- * @param {*} startIndices 
- * @param {*} endIndices 
- * @returns 
+ *
+ * @param {string} s
+ * @param {arr} startIndices
+ * @param {arr} endIndices
+ * @returns
  */
 
+// complete the numberOfItems function below. The function must return an integer array that contains the resuts for each startIndices[i] and endIndices[i] pairs.
 
-function numberItems(s, startIndices, endIndices) {
-    // Write your code here
-    let result = [];
-    for (let i = 0; i < startIndices.length; i++) {
-        let count = 0;
-        let idx = startIndices[i];
-        while (idx <= endIndices[i]) {
-            if (s[idx] === 'charCodeAt(124)') {
-                count++;
-            }
-            idx++;
+// numberOfItems has three parameters:
+// s: a string to evaluate
+// startIndices: an integer array, the starting indices
+// endIndices: an integer array, the ending indices
+
+// Constraints
+// 1 <= n <= 10^5
+// 1 <= startIndices[i] <= endIndices[i] <= n
+// Each character of s is either * or |
+
+// Solution
+
+function numberOfItems(s, startIndices, endIndices) {
+  // Write your code here
+  let result = [];
+  let count = 0;
+  let open = false;
+  for (let i = 0; i < startIndices.length; i++) {
+    let start = startIndices[i];
+    let end = endIndices[i];
+    for (let j = start - 1; j < end; j++) {
+      if (s[j] === '*') {
+        count++;
+      } else if (s[j] === '|') {
+        if (open) {
+          open = false;
+          result.push(count);
+          count = 0;
+        } else {
+          open = true;
         }
-        result.push(count);
+      }
     }
-    return result;
+  }
+  return result;
 }
 
-function numberOfItems(s, startIndices, endIndices){
-    const numOfItemsArr = [];
-    startIndices.forEach((start, index) => {
-        const end = endIndices[index];
-        const subS = s.substring(start-1, end);
-        const items = subS.split('|');
-        // skipping first and last items because they are either empty or opened
-        const numOfItems = items.slice(1, items.length-1).join('').length;
-        numOfItemsArr.push(numOfItems);
-    });
-    return numOfItemsArr;
-}
+// Test
+console.log(numberOfItems('*|*|', [1], [3])); // 0
+console.log(numberOfItems('*|*|*|', [1], [7])); // 2
+console.log(numberOfItems('*|*|*|', [1, 1], [7, 3])); // 2, 0
+console.log(numberOfItems('*|*|*|', [1, 1, 1], [7, 3, 5])); // 2, 0, 1
+console.log(numberOfItems('*|*|*|', [1, 1, 1, 1], [7, 3, 5, 7])); // 2, 0, 1, 2
+console.log(numberOfItems('*|*|*|', [1, 1, 1, 1, 1], [7, 3, 5, 7, 9])); // 2, 0, 1, 2, 3

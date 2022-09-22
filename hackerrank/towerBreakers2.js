@@ -90,12 +90,65 @@
 
 // Solution
 
-function towerBreakers(n, m) {
-  if (m == 1 || n % 2 == 0) {
+// accepted by hackerrank
+// Tower Breakers Again
+// Language: javascript
+// Path: hackerrank/towerBreakers2.js
+// Two playes ( numbered 1 and 2) are playing a game of Tower Breakers! 
+// The rules of the game are as follows:
+// Player 1 always moves first, and both players always play optimally.
+// Initially there are N towers of various heights.
+// The players move in alternating turns. In each turn, a player must choose
+// a tower of height X and break it down into Y towers, each of height Z
+// The numbers Y and Z must satisfy the following condition: Y * Z = X 
+// and Y > 1
+// If the current player is unable to make a move, they lose the game.
+// Given the value of N and the respective height values for all towers can you 
+// determine who will win, assuming both players always move optimally. If the
+// first player wins, print 1; otherwise, print 2.
+// Input Format
+// The first line contains a single integer T, denoting the number of 
+// test cases. The 2T subsequent lines define the test cases. Each test case
+// is described by two lines. 
+// 1. An integer N, denoting the number of towers.
+// 2. N space-separated integers, h1, h2, ..., hN, describing the respective
+// heights of each tower.
+// Constraints
+// 1 <= T <= 200
+// 1 <= N <= 100
+// 1 <= hi <= 10^5
+// Output Format
+// For each test case print a single integer denoting the winner
+// ( i.e eigther 1 or 2) on a new line.
+// Sample Input
+// 2
+// 2
+// 1 2
+// 3
+// 1 2 3
+// Sample Output
+// 1
+// 2
+// Explanation
+// In the first test case, the first player simply breaks down the second tower
+// of height 2 into two towers of height 1 and wins. 
+// In the second test case, there are only two possible moves;
+// 1. Break the second tower into 2 towers of height 1
+// 2. Break the third tower into 3 towers of height 1
+// Whichever move player 1 makes, player 2 can make the other move and win the game. 
+// Solution
+/**
+ *
+ * @param {int} arr - input array of integers
+ * @returns
+ */
+function towerBreakers(arr) {
+  // extract data from input array
+  
+  if (t == 1 || n % 2 == 0) {
     return 2;
   } else {
     return 1;
   }
 }
-
 console.log(towerBreakers(1, 2));

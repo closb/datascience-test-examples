@@ -123,14 +123,11 @@ console.log(processData('10 1 42 2 1 14 3 1 28 3 1 60 1 78 2 2'));
 
 // Constraints
 
-
 // It is guaranteed that a valid answer always exists for each query of type 3.
-
 
 // Output Format
 
 // For each query of type 3, print the value of the element at the front of the queue on a new line.
-
 
 // Sample Input
 
@@ -150,14 +147,10 @@ console.log(processData('10 1 42 2 1 14 3 1 28 3 1 60 1 78 2 2'));
 // 2       query = [2]
 // 2       query = [2]
 
-
 // Sample Output
 
-
 // 14
 // 14
-
-
 
 // Explanation
 
@@ -175,45 +168,25 @@ console.log(processData('10 1 42 2 1 14 3 1 28 3 1 60 1 78 2 2'));
 // Dequeue the value at the head of the queue, 28; queue = [60, 78].
 
 // Solution
-
 function processData(input) {
+  //Enter your code here
 
-  // create enque and deque functions
-  function enqueue(x) {
-    stack1.push(x);
-  }
-  function dequeue() {
-    if (stack2.length === 0) {
-      while (stack1.length > 0) {
-        stack2.push(stack1.pop());
-      }
-    }
-    return stack2.pop();
-  }
+  que = [];
 
-  // split input into array of queries
-  var queries = input.split('');
-  // create two stacks
-  var stack1 = [];
-  var stack2 = [];
-  // iterate through queries
-  for (var i = 0; i < queries.length; i++) {
-    // if query is 1, enqueue
-    if (queries[i] === 1) {
-      enqueue(queries[i + 1]);
-    }
-    // if query is 2, dequeue
-    if (queries[i] === 2) {
-      dequeue();
-    }
-    // if query is 3, print
-    if (queries[i] === 3) {
-      console.log(stack1[0]);
+  var stringArr = input.split('\n');
+  for (let i = 1; i < stringArr.length; i++) {
+    var subInstr = stringArr[i].split(' ');
+
+    if (subInstr[0] == 1) {
+      que.push(subInstr[1]);
+    } else if (subInstr[0] == 2) {
+      que.shift();
+    } else {
+      console.log(que[0]);
     }
   }
 }
+
 console.log(processData('10 1 42 2 1 14 3 1 28 3 1 60 1 78 2 2'));
 
-// Language: javascript
-// Path: hackerrank/queUsingTwoStacks.js
-
+// answer accepted by hackerrank

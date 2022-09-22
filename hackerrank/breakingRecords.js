@@ -76,4 +76,6 @@ function breakingRecords(scores) {
     }
     return [maxCount, minCount];
 }
+console.log(breakingRecords([10, 5, 20, 20, 4, 5, 2, 25, 1]));
 
+// accepted by hackerrank

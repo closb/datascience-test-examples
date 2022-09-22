@@ -9,7 +9,7 @@
 
 // the values are separated by a space. For example "sender_user_id recipient_user_id amount_of_transaction"
 
-// Users that perform an excessive amount of transactions might be abusing the service so you have tasks to identify the users that have a number of transactions over a threshold. The list of user ids should be ordereed in ascending number valuer.
+// Users that perform an excessive amount of transactions might be abusing the service so you have a tasks to identify the users that have a number of transactions over a threshold. The list of user ids should be ordereed in ascending number value.
 
 // Example
 
@@ -48,7 +48,7 @@
 
 // Input Format for Custom Testing
 
-// The first line contains the integer n the size of the logs
+// The the integer n the size of the logs
 // The following n lines contain a string logs[i]
 // The last line contains n integer threshold
 
@@ -93,50 +93,65 @@
 // 33 - 1 transaction
 
 /**
- * 
- * @param {*} logs - array of strings
- * @param {*} threshold - integer
- * @returns array of strings 
+ *
+ * @param {string} logs - array of strings
+ * @param {number} threshold - integer value
+ * @returns {array} - sorted array of user ids meeting threshold
  */
 
 function processLogs(logs, threshold) {
   // create a map to store the user ids and the number of transactions
   let map = new Map();
-    // iterate over the logs
-    for (let i = 0; i < logs.length; i++) {
-        // split the log entry into an array
-        let log = logs[i].split(' ');
-        // get the sender and recipient ids
-        let sender = log[0];
-        let recipient = log[1];
-        // if the sender is not in the map, add it
-        if (!map.has(sender)) {
-            map.set(sender, 1);
-        } else {
-            // if the sender is in the map, increment the number of transactions
-            map.set(sender, map.get(sender) + 1);
-        }
-        // if the recipient is not in the map, add it
-        if (!map.has(recipient)) {
-            map.set(recipient, 1);
-        } else {
-            // if the recipient is in the map, increment the number of transactions
-            map.set(recipient, map.get(recipient) + 1);
-        }
+  // iterate through the logs
+  for (let i = 0; i < logs.length; i++) {
+    // split the log entry into an array
+    let log = logs[i].split(' ');
+    // get the sender and recipient user ids
+    let sender = log[0];
+    let recipient = log[1];
+    // check if the sender is in the map
+    if (map.has(sender)) {
+      // increment the sender's transaction count
+      map.set(sender, map.get(sender) + 1);
+    } else {
+      // add the sender to the map
+      map.set(sender, 1);
     }
-    // create an array to store the user ids that have at least threshold transactions
-    let result = [];
-    // iterate over the map
-    for (let [key, value] of map) {
-        // if the number of transactions is greater than or equal to the threshold, add the user id to the result array
-        if (value >= threshold) {
-            result.push(key);
-        }
+    // check if the recipient is in the map
+    if (map.has(recipient)) {
+      // increment the recipient's transaction count
+      map.set(recipient, map.get(recipient) + 1);
+    } else {
+      // add the recipient to the map
+      map.set(recipient, 1);
     }
-    // sort the result array in ascending order
-    result.sort((a, b) => a - b);
-    // return the result array
-    return result;
+  }
+  // create an array to store the user ids that meet the threshold
+  let result = [];
+  // iterate through the map
+  for (let [key, value] of map) {
+    // check if the user's transaction count is greater than or equal to the threshold
+    if (value >= threshold) {
+      // add the user id to the result array
+      result.push(key);
+    }
+  }
+  // sort the result array in ascending order
+  result.sort((a, b) => a - b);
+  // return the result array
+  return result;
 }
+console.log(
+  processLogs(['88 99 200', '88 99 300', '99 32 100', '12 12 15'], 2)
+);
 
-console.log(processLogs(["9 7 50" , "22 7 20", "33 7 50" ,"22 7 30"], 2));
+// logs = ["88 99 200", "88 99 300", "99 32 100", "12 12 15"]
+// threshold = 2
+
+// logs = ["9 7 50", "22 7 20", "33 7 50", "22 7 30"]
+// threshold = 3
+
+// logs = ["1 2 50", "1 7 70", "1 3 20", "2 2 17"]
+// threshold = 2
+
+// accepted by hackerrank does not pass all test cases
