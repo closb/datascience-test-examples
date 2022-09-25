@@ -18,5 +18,3 @@ The following is a list of sorting algorithms commonly used, based on Wikipedia 
 * Cube Sort
 * Bubble Sort
 * Exchange Sort
-
-
