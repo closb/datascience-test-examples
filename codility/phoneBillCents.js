@@ -22,47 +22,53 @@
 
 // /** */
 function solution(S) {
-  // write your code in JavaScript (Node.js 8.9.4)
-
-  let arr = S.split('\n');
-  let obj = {};
-  for (let i = 0; i < arr.length; i++) {
-    let current = arr[i].split(',');
-    if (obj[current[1]]) {
-      obj[current[1]] += convertToSeconds(current[0]);
-    } else {
-      obj[current[1]] = convertToSeconds(current[0]);
+    // write your code in JavaScript (Node.js 8.9.4)
+    // split the string into an array of strings
+    let arr = S.split("\n");
+    // create an object to hold the phone numbers and their durations
+    let obj = {};
+    // loop through the array
+    for (let i = 0; i < arr.length; i++) {
+        // split each string into an array of strings
+        let current = arr[i].split(",");
+        // if the current element is equal to the variable, increment the variable
+        if (obj[current[1]]) {
+            // convert time to seconds
+            obj[current[1]] += convertToSeconds(current[0]);
+        } else {
+            obj[current[1]] = convertToSeconds(current[0]);
+        }
     }
-  }
-  let total = 0;
-  for (let key in obj) {
-    total += calculateCost(obj[key]);
-  }
-  return total;
+    // create a variable to hold the total cost
+    let total = 0;
+    // loop through the object
+    for (let key in obj) {
+        // calculate the cost of each phone number
+
+        total += calculateCost(obj[key]);
+    }
+    // return the total cost
+
+    return total;
 }
+// convert time to seconds
 function convertToSeconds(time) {
-  let arr = time.split(':');
-  return Number(arr[0]) * 3600 + Number(arr[1]) * 60 + Number(arr[2]);
+    // split the time into an array of strings
+    let arr = time.split(":");
+    // create a variable to hold the total seconds
+    return Number(arr[0]) * 3600 + Number(arr[1]) * 60 + Number(arr[2]);
 }
+
+// create function to calculate cost
 function calculateCost(seconds) {
-  if (seconds <= 300) {
-    return seconds * 3;
-  } else {
-    return 900 + (seconds - 300) * 150;
-  }
+    // if the seconds are less than or equal to 300
+    if (seconds <= 300) {
+        // return the seconds multiplied by 3
+        return seconds * 3;
+    } else {
+        // return 900 plus the seconds minus 300 multiplied by 150
+        return 900 + (seconds - 300) * 150;
+    }
 }
-function calculateCost(seconds) {
-  if (seconds <= 300) {
-    return seconds * 3;
-  } else {
-    return 900 + (seconds - 300) * 150;
-  }
-}
-function calculateCost(seconds) {
-  if (seconds <= 300) {
-    return seconds * 3;
-  } else {
-    return 900 + (seconds - 300) * 150;
-  }
-}
-fun;
+console.log(solution("00:01:07,400-234-090  00:05:01,701-080-080  00:05:00,400-234-090"));
+// language javascript
