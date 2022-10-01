@@ -65,4 +65,4 @@ Are represented by a sequences of characters or patterns. They are most likely t
     * patterns
     * labels
 
-Familiarity with these fundemental structures is important since they provide the lanquages used to model applications. You must become fluent in the vocabulary.
+### Familiarity with these fundemental structures is important since they provide the lanquages used to model applications. You must become fluent in the vocabulary.
