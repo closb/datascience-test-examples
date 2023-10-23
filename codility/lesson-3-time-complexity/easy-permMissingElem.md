@@ -61,11 +61,10 @@ function solution(A) {
 
 + The solution obtained perfect score.
 + No time complexity analysis provided.
-+ Detected time complexity: O(N) or O(N * log(N))
 
 ## DETECTED TIME COMPLEXITY
 
-+ Detected time complexity: O(N) or O(N * log(N))
+O(N) or O(N * log(N))
 
 ## ALGORITHM EXPLANATION
 
