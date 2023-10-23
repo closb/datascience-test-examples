@@ -1,4 +1,5 @@
 # INSTRUCTIONS
+
 An array A consisting of N different integers is given. The array contains integers in the range [1..(N + 1)], which means that exactly one element is missing.
 
 Your goal is to find that missing element.
@@ -66,14 +67,10 @@ function solution(A) {
 
 + Detected time complexity: O(N) or O(N * log(N))
 
-#@ ANALYSIS
-
-Detected time complexity: O(N) or O(N * log(N))
-
-# ALGORITHM EXPLANATION
+## ALGORITHM EXPLANATION
 
 The solution uses a for loop to loop through the array and check if the next element is one more than the current element. If it is not, then we have found the missing element. The solution sorts the array first and then loops through the array. The time complexity of this algorithm is O(N * log(N)).
 
-# CODE EXPLANATION
+## CODE EXPLANATION
 
 The solution sorts the array first and then loops through the array. The time complexity of this algorithm is O(N * log(N)).
